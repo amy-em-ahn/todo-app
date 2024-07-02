@@ -34,10 +34,27 @@ function randomIDGenerate() {
     return '_' + Math.random().toString(36).substring(2, 9);
 }
 ```
+### :three: Remove elements from the array - pop, shift, splice, filter
 
+splice: delete elements using index
+```
+function deleteTask(id) {
+ for (let i = 0; i < taskList.length; i++) {
+  if (taskList[i].id == id) {
+   taskList.splice(i, 1) //delete the first element from index [i]
+   break;
+  }
+ }
+}
+```
 
-### 🔗 Demo: <a href="https://upupdown.netlify.app/" target="_blank">https://upupdown.netlify.app</a>
-<img src="upDownGame-main.png">
+filter: allows you to remove elements from the array programmatically.
+```
+taskList = taskList.filter(task => task.id !== taskIdToDelete);
+```
+
+### 🔗 Demo: <a href="https://todooo-webapp.netlify.app/" target="_blank">todooo-webapp.netlify.app</a>
+<img src="todo-main.png">
 
 ### :bulb: Tips
 * <img src="https://skillicons.dev/icons?i=vscode" style="width:20px;"/> **shortcut** - settings: ctrl + '+' + ','
