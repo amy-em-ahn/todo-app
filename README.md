@@ -28,6 +28,8 @@
   => File > Preferences > Settings
 * [VS code] editor.wordSeparators - adjust word separators <br />
   ex) if you remove '-', you can select the whole class name 'class-name' with a double click
+* [CSS] space - padding: top right bottom left; <br />
+  ex) padding: 10px 20px 15px 5px;
 
 ### Skills
 <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> 
