@@ -36,6 +36,18 @@ function randomIDGenerate() {
 ```
 ### :three: Remove elements from the array - pop, shift, splice, filter
 
+splice: delete elements using index
+```
+function deleteTask(id) {
+ for (let i = 0; i < taskList.length; i++) {
+  if (taskList[i].id == id) {
+   taskList.splice(i, 1) //delete the first element from index [i]
+   break;
+  }
+ }
+}
+```
+
 filter: allows you to remove elements from the array programmatically.
 ```
 taskList = taskList.filter(task => task.id !== taskIdToDelete);
