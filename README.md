@@ -48,9 +48,18 @@ function deleteTask(id) {
 }
 ```
 
-filter: allows you to remove elements from the array programmatically.
+filter: allows you to remove elements from the array programmatically. 
+(https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_filter)
 ```
-taskList = taskList.filter(task => task.id !== taskIdToDelete);
+<script>
+const ages = [32, 33, 16, 40];
+
+document.getElementById("demo").innerHTML = ages.filter(checkAdult);
+
+function checkAdult(age) {
+  return age >= 18;
+}
+</script>
 ```
 ### :four: querySelectorAll
 _returns a static (not live) NodeList representing a list of the document's elements that match the specified group of selectors._ (https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll)
