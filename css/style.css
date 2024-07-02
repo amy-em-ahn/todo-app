@@ -44,3 +44,7 @@ hr {
 .task-completed {
     text-decoration: line-through;
 }
+
+.notice {
+    font-size: 0.8rem;
+}

@@ -18,6 +18,24 @@ userInput.addEventListener('keydown', (event) => {
   }
 });
 
+// Modal setup
+const deleteConfirmModal = new bootstrap.Modal(document.getElementById('delete-confirm-modal'));
+let taskIdToDelete = null;
+
+document.getElementById('btn-delete-confirm-modal').addEventListener('click', () => {
+  if (taskIdToDelete) {
+    taskList = taskList.filter(task => task.id !== taskIdToDelete);
+    taskIdToDelete = null;
+    deleteConfirmModal.hide();
+    render();
+  }
+});
+
+// Event listener to close the modal
+document.getElementById('cancel-modal-button').addEventListener('click', () => {
+  deleteConfirmModal.hide();
+});
+
 function addTask() {
 
     let tasks = {
@@ -44,7 +62,7 @@ function render() {
                 <button class="btn-icon ${task.isCompleted ? 'd-none' : ''}" onclick="toggleComplete('${task.id}')"><i class="fa-solid fa-check"></i></button>
                 <button class="btn-icon ${task.isCompleted ? '' : 'd-none'}" onclick="toggleComplete('${task.id}')"><i class="fa-solid fa-rotate-left"></i></button>
                 <button class="btn-icon"><i class="fa-solid fa-pen-to-square"></i></button>
-                <button class="btn-icon" onclick="deleteTask('${task.id}')"><i class="fa-solid fa-trash-can"></i></button>
+                <button class="btn-icon" onclick="confirmDeleteTask('${task.id}')"><i class="fa-solid fa-trash-can"></i></button>
             </div>
             <div class="row">
                 <hr>
@@ -68,11 +86,11 @@ window.toggleComplete = function(id) {
     render();
 }
 
-// Delete task
-window.deleteTask = function(id) {
-    taskList = taskList.filter(task => task.id !== id);
-    render();
-};
+// Confirm delete task
+window.confirmDeleteTask = function(id) {
+    taskIdToDelete = id;
+    deleteConfirmModal.show();
+}
 
 function editTask() {
 

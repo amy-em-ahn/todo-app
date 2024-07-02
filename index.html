@@ -49,6 +49,7 @@
                 <input type="text" class="form-control" placeholder="Enter a task" id="user_input">
                 <button class="btn btn-outline-secondary" type="button" id="btn-enter">Enter</button>
             </div>
+            <p class="notice fw-light py-0">* Press &lt;Enter&gt; to add a task</p>
         </section>
 
         <section id="list-area">
@@ -82,6 +83,27 @@
             </div>
         </section>
     </div>
+
+
+    <!-- Modal -->
+    <div class="modal" tabindex="-1" id="delete-confirm-modal" aria-labelledby="deleteConfirmationModalTitle" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="delete-confirm-modal-title">Delete Confirmation</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p>Are you sure you want to delete this task?</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="cancel-modal-button" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-title="Cancel">Cancel</button>
+            <button type="button" class="btn btn-primary" id="btn-delete-confirm-modal" data-bs-toggle="tooltip" data-bs-title="Delete">Delete</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
     <footer class="container">
             
     </footer>
