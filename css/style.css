@@ -1,0 +1,46 @@
+/* basic */
+body {
+    margin: 0;
+    padding-top: 20px;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(253, 188, 45, 1) 33%, rgba(34, 193, 195, 1) 100%);
+}
+
+hr {
+    border-color: var(--text-secondary);
+}
+
+.container {
+    background-color: var(--bs-white);
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+}
+
+/* buttons */
+.btn-icon {
+    border: 0;
+    background-color: var(--bs-white);
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.btn-icon:hover {
+    border: 0;
+    color: var(primary);
+}
+
+/* title */
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.app-container {
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+/* tasks  */
+.task-completed {
+    text-decoration: line-through;
+}
