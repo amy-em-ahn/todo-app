@@ -24,13 +24,13 @@
 <img src="upDownGame-main.png">
 
 ### :bulb: Tips
-* [VS code] shortcut - settings: ctrl + '+' + ','
+* [VS code] **shortcut** - settings: ctrl + '+' + ','
   => File > Preferences > Settings
 * [VS code] editor.wordSeparators - adjust word separators <br />
   ex) if you remove '-', you can select the whole class name 'class-name' with a double click
-* [CSS] space - padding: top right bottom left; <br />
+* [CSS] **space** - padding: top right bottom left; <br />
   ex) padding: 10px 20px 15px 5px;
-* [bootstrap 5.3] text
+* [bootstrap 5.3] **text**
   ```
   <p class="text-start">Start aligned</p>
   <p class="text-center">Center aligned</p>
@@ -63,6 +63,16 @@
   <p class="text-decoration-underline">line underneath</p>
   <p class="text-decoration-line-through">line going through</p>
   <a href="#" class="text-decoration-none">link underline removed</a>
+  ```
+* [bootstrap 5.3] **padding**
+  ```
+  p-0 // Set padding on all sides range in 0 - 5
+  pt-0 // top
+  pr-0 // right
+  pb-0 // bottom
+  pl-0 // left
+  px-0 // horizontal
+  py-0 // vertical 
   ```
 
 ### Skills
