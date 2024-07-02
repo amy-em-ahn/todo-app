@@ -30,6 +30,40 @@
   ex) if you remove '-', you can select the whole class name 'class-name' with a double click
 * [CSS] space - padding: top right bottom left; <br />
   ex) padding: 10px 20px 15px 5px;
+* [bootstrap 5.3] text
+  ```
+  <p class="text-start">Start aligned</p>
+  <p class="text-center">Center aligned</p>
+  <p class="text-end">End aligned</p>
+
+  <p class="text-lowercase">lowercased</p>
+  <p class="text-uppercase">UPPERCASED</p>
+  <p class="text-capitalize">PascalCased</p>
+
+  <p class="fs-1">.fs-1 text</p> // biggest
+  <p class="fs-6">.fs-6 text</p> // smallest
+  
+  <p class="fw-bold">Bold text.</p>
+  <p class="fw-bolder">Bolder weight text (relative to the parent element).</p>
+  <p class="fw-semibold">Semibold weight text.</p>
+  <p class="fw-medium">Medium weight text.</p>
+  <p class="fw-normal">Normal weight text.</p>
+  <p class="fw-light">Light weight text.</p>
+  <p class="fw-lighter">Lighter weight text (relative to the parent element).</p>
+  <p class="fst-italic">Italic text.</p>
+  <p class="fst-normal">Text with normal font style</p>
+
+  // Line height
+  <p class="lh-1">narrowest</p>
+  <p class="lh-sm">small</p>
+  <p class="lh-base">default</p>
+  <p class="lh-lg">wide</p>
+
+  // Decoration
+  <p class="text-decoration-underline">line underneath</p>
+  <p class="text-decoration-line-through">line going through</p>
+  <a href="#" class="text-decoration-none">link underline removed</a>
+  ```
 
 ### Skills
 <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> 
