@@ -6,7 +6,7 @@
 > A simple to-do list web application using Vanilla Javascript
 
 ### :bookmark_tabs: Requirements
-* User can add tasks
+* User add tasks
 * Button - check / edit / delete
   * Check button
     * User checks it when the task is completed
@@ -19,7 +19,23 @@
     
 #### :moneybag: **Bonus**
 
-  
+## <img src="https://skillicons.dev/icons?i=javascript" style="width:20px;"/> JavaScript
+
+### :one: innerHTML vs textContent
+* textContent gets the content of all elements <br />
+* innerText is aware of HTML tag and CSS styling
+
+### :two: Object
+
+To handle data, an ID is required. 
+```
+// ID generator
+function randomIDGenerate() {
+    return '_' + Math.random().toString(36).substring(2, 9);
+}
+```
+
+
 ### 🔗 Demo: <a href="https://upupdown.netlify.app/" target="_blank">https://upupdown.netlify.app</a>
 <img src="upDownGame-main.png">
 
@@ -74,7 +90,6 @@
   px-0 // horizontal
   py-0 // vertical 
   ```
-* <img src="https://skillicons.dev/icons?i=javascript" style="width:20px;"/> **innerHTML vs textContent**
   
 
 ### Skills
