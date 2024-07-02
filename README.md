@@ -52,6 +52,11 @@ filter: allows you to remove elements from the array programmatically.
 ```
 taskList = taskList.filter(task => task.id !== taskIdToDelete);
 ```
+### :four: querySelectorAll
+_returns a static (not live) NodeList representing a list of the document's elements that match the specified group of selectors._ (https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll)
+```
+let tab = document.querySelectorAll(".task-tabs div")
+```
 
 ### 🔗 Demo: <a href="https://todooo-webapp.netlify.app/" target="_blank">todooo-webapp.netlify.app</a>
 <img src="todo-main.png">
