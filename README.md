@@ -36,8 +36,8 @@ function randomIDGenerate() {
 ```
 
 
-### 🔗 Demo: <a href="https://upupdown.netlify.app/" target="_blank">https://upupdown.netlify.app</a>
-<img src="upDownGame-main.png">
+### 🔗 Demo: <a href="https://todooo-webapp.netlify.app/" target="_blank">https://todooo-webapp.netlify.app</a>
+<img src="todo-main.png">
 
 ### :bulb: Tips
 * <img src="https://skillicons.dev/icons?i=vscode" style="width:20px;"/> **shortcut** - settings: ctrl + '+' + ','
