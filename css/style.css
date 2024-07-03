@@ -133,7 +133,6 @@ footer {
         background-color: var(--bs-body-bg);
         background-clip: padding-box;
         border: var(--bs-border-width) solid var(--bs-border-color);
-        border-radius: var(--bs-border-radius);
     }
 
     .task-input:focus {
@@ -148,5 +147,12 @@ footer {
         font-size: 1em;
         font-weight: 400;
         width: 100%;
+    }
+
+    .dropdown-menu {
+        --bs-btn-padding-y: 0.25rem;
+        --bs-btn-padding-x: 0.5rem;
+        --bs-btn-font-size: 0.875rem;
+        --bs-btn-border-radius: var(--bs-border-radius-sm);
     }
 }
