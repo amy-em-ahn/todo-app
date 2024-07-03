@@ -40,11 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
         deleteConfirmModal.hide();
     });
 
-    document.querySelectorAll('.dropdown-menu li').forEach(item => {
+    document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(item => {
         item.addEventListener('click', function(event) {
             event.preventDefault();
             filter(event);
-            render();
         });
     });
 
@@ -85,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let task = taskList.find(task => task.id === id);
         if (task) {
             task.isCompleted = !task.isCompleted;
-            render();
+            filterTasks();  // Filter tasks after toggling complete status
         }
     }
 
@@ -100,11 +99,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function filter(event) {
         currentFilter = event.target.getAttribute('value');
-        filteredList = [];
+        filterTasks();
+    }
 
-        if (currentFilter === 'ongoing') {
+    function filterTasks() {
+        if (currentFilter === 'all') {
+            filteredList = taskList;
+        } else if (currentFilter === 'ongoing') {
             filteredList = taskList.filter(task => !task.isCompleted);
-        } else if (currentFilter === 'complete') {
+        } else if (currentFilter === 'completed') {
             filteredList = taskList.filter(task => task.isCompleted);
         }
         render();
