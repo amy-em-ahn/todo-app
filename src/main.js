@@ -16,28 +16,42 @@ document.addEventListener('DOMContentLoaded', () => {
     let taskList = [];
     let currentFilter = 'all';
     let filteredList = [];
-    const deleteConfirmModal = new bootstrap.Modal(document.getElementById('delete-confirm-modal'));
+    const confirmModal = new bootstrap.Modal(document.getElementById('confirm-modal'));
     let taskIdToDelete = null;
 
     btnEnter.addEventListener('click', addTask);
-
+    
     userInput.addEventListener('keydown', (event) => {
         if (event.key === 'Enter') {
             btnEnter.click();
         }
     });
 
-    document.getElementById('btn-delete-confirm-modal').addEventListener('click', () => {
+    // when input filed focused, user input text remove
+    userInput.addEventListener('focus', () => {
+        userInput.value = "";
+        userInput.placeholder = "";
+    });
+
+    userInput.addEventListener('blur', () => {
+        userInput.placeholder = "Enter a task";
+    });
+
+
+    document.getElementById('btn-delete-modal').addEventListener('click', () => {
         if (taskIdToDelete) {
             taskList = taskList.filter(task => task.id !== taskIdToDelete);
             taskIdToDelete = null;
-            deleteConfirmModal.hide();
-            render();
+            confirmModal.hide(); 
+            filterTasks(); // display the filtered tasks
+        } else {
+            confirmModal.hide(); 
         }
     });
 
-    document.getElementById('cancel-modal-button').addEventListener('click', () => {
-        deleteConfirmModal.hide();
+
+    document.getElementById('btn-cancel-modal').addEventListener('click', () => {
+        confirmModal.hide();
     });
 
     document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(item => {
@@ -50,6 +64,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function addTask() {
+        if (userInput.value.trim() === "") {
+            showModalWithMessage("Please enter a task");
+            return;
+        }
+        
         let tasks = {
             id: randomIDGenerate(),
             taskContents: userInput.value,
@@ -57,7 +76,12 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         taskList.push(tasks);
         userInput.value = "";
-        render();
+        
+        if (currentFilter !== 'all') {
+            filterTasks(); // Update the filtered list and render if not in 'all' filter
+        } else {
+            render(); // Render all tasks if in 'all' filter
+        }
     }
 
     function render() {
@@ -92,7 +116,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.confirmDeleteTask = function(id) {
         taskIdToDelete = id;
-        deleteConfirmModal.show();
+        document.getElementById('modal-message').textContent = "Are you sure you want to delete this task?";
+        document.getElementById('btn-cancel-modal').classList.remove('d-none');
+        document.getElementById('btn-delete-modal').textContent = "Delete";
+        confirmModal.show(); 
+    }
+
+    // Modal function
+    function showModalWithMessage(message) {
+        document.getElementById('modal-message').textContent = message;
+        document.getElementById('btn-cancel-modal').classList.add('d-none');
+        document.getElementById('btn-delete-modal').textContent = "Close";
+        confirmModal.show();
     }
 
     function randomIDGenerate() {
