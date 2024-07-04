@@ -34,7 +34,7 @@ hr {
 }
 
 /* title color: #2564cf; */
-.fw-medium.fs-1{
+.fw-medium.fs-1 {
     color: white;
 }
 
@@ -119,7 +119,7 @@ footer {
     .input-area {
         position: absolute;
     }
-    
+
     .task-input {
         display: block;
         width: 100%;
