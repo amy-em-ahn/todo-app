@@ -44,6 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
         item.addEventListener('click', function(event) {
             event.preventDefault();
             filter(event);
+            // dropdown select
+            updateDropdownButtonText(event.target.textContent);
         });
     });
 
@@ -111,5 +113,9 @@ document.addEventListener('DOMContentLoaded', () => {
             filteredList = taskList.filter(task => task.isCompleted);
         }
         render();
+    }
+
+    function updateDropdownButtonText(text) {
+        document.getElementById('dropdown-button').textContent = text;
     }
 });
