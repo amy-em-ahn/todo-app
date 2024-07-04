@@ -37,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
         userInput.placeholder = "Enter a task";
     });
 
-
     document.getElementById('btn-delete-modal').addEventListener('click', () => {
         if (taskIdToDelete) {
             taskList = taskList.filter(task => task.id !== taskIdToDelete);
