@@ -64,14 +64,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         for (let task of list) {
             resultHTML += `
-                <!-- div class="col-1 col-sm-1">
+                <div class="col-1" style="width: 60px;">
                     <input class="form-check-input" type="checkbox" ${task.isCompleted ? 'checked' : ''} onclick="toggleComplete('${task.id}')">
-                </!-->
-                <div class="col-7 col-sm-6 text-start ${task.isCompleted ? 'task-completed' : ''}">${task.taskContents}</div>
-                <div class="col-4 col-sm-5 text-end">
+                </div>
+                <div style="width: 100%;" class="col text-start ${task.isCompleted ? 'task-completed' : ''}">${task.taskContents}</div>
+                <div class="col-2 text-end" style="width:120px;">
                     <button class="btn-icon ${task.isCompleted ? 'd-none' : ''}" onclick="toggleComplete('${task.id}')"><i class="fa-solid fa-check"></i></button>
                     <button class="btn-icon ${task.isCompleted ? '' : 'd-none'}" onclick="toggleComplete('${task.id}')"><i class="fa-solid fa-rotate-left"></i></button>
-                    <!-- <button class="btn-icon"><i class="fa-solid fa-pen-to-square"></i></button> -->
+                    <button class="btn-icon"><i class="fa-solid fa-pen-to-square"></i></button>
                     <button class="btn-icon" onclick="confirmDeleteTask('${task.id}')"><i class="fa-solid fa-trash-can"></i></button>
                 </div>
                 <div class="row"><hr></div>`;
